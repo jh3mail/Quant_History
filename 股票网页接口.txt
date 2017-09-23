@@ -1,0 +1,24 @@
+http://hq.sinajs.cn/list=sz000002
+
+记录下获取股票实时数据的接口，记录下.
+
+以基金兴和500018为例
+******************************
+新浪的接口： http://hq.sinajs.cn/list=sh500018
+
+雅酷财经的： http://finance.yahoo.com/d/quotes.csv?s=500018.ss&f=snd1l1yr
+
+网易的接口： http://api.money.126.net/data/feed/500018,money.api
+
+
+CHINAstock的web-service: http://www.webxml.com.cn/WebServices/ChinaStockWebService.asmx/getStockInfoByCode?theStockCode=sh500018
+
+还有其它，不过暂时看好这几个，获取股票实时数据后可以用python分析，这样可以搞搞自己的交易系统，在配合邮件通知，爽啊
+
+其实google都有股票接口api的： http://finance.google.com/finance/info?client=ig&q=SHA:601398 ，但我找不到500018怎样搞进去，还是没有这个基金的代码呢.
+
+顶
+
+
+=SUBSTITUTE(WEBSERVICE(Sheet1!$1:$1048576"http://api.money.126.net/data/feed/"&IF(LEFT(Sheet1!$B$3)="6","0"&Sheet1!$B$3,"1"&Sheet1!$B$3)&",money.api")& T(NOW()),"} });","")
+
