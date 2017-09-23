@@ -10,7 +10,7 @@ time_end   = strcat(date, ' 15:00:00') ;
 
 ret = gm.InitMD('jh3mail@163.com', '159753', MDMode.MD_MODE_NULL);
 if ret ~= 0
-  disp('≥ı ºªØ ß∞‹!');
+  disp('Initial Failed !!!');
   disp(ret);
   return;
 end
